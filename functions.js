@@ -1,17 +1,11 @@
 
 
-function addOption(selectID, optionSelect) {
-  if(optionSelect.value == undefined || optionSelect.value == "") {
-    throw new Error("Preencha o option value")
-  }
+function addOption(selectID, text, value) {
 
-  if(optionSelect.text == undefined || optionSelect.text == "") {
-    throw new Error("Preencha o option text")
-  }
 
   var option = document.createElement("option");
-  option.text = optionSelect.text;
-  option.value = optionSelect.value;
+  option.text = text;
+  option.value = value ;
   var select = document.getElementById(selectID);
   select.appendChild(option);
 }
